@@ -37,6 +37,7 @@ namespace SimpleCoreApi
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSwaggerGen();
 
             services.AddEntityFrameworkSqlite();
             services.AddDbContext<ApplicationDbContext>();
@@ -49,6 +50,8 @@ namespace SimpleCoreApi
             loggerFactory.AddDebug();
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUi();
         }
     }
 }
