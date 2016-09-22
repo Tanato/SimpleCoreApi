@@ -10,5 +10,10 @@ namespace SimpleCoreApi
         {
             optionsBuilder.UseSqlite("Filename=./SimpleCoreDataBase.db");
         }
+        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
