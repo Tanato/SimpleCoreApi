@@ -48,6 +48,7 @@ namespace SimpleCoreApi
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
             app.UseSwagger();
             app.UseSwaggerUi();
         }
